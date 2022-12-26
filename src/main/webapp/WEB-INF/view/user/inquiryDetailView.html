@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문의 상세 내역</title>
+</head>
+<body>
+  <th:table>
+    <th:thead>
+      <th:td>제목</th:td>
+      <th:td>본문</th:td>
+    </th:thead>
+    <th:tr th:each="inquiry: ${inquiryList}">
+      <th:td th:text="${inquiry.title}"></th:td>
+      <th:td th:text="${inquiry.text}"></th:td>
+    </th:tr>
+  </th:table>
+</body>
+</html>

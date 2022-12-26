@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>내 문의 목록</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>제목</td>
+                <td>분류</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="inquiry : ${inquiryList}">
+                <td th:text="${inquiry.title}" th:type="toolbarButtonGraphics" onclick="location.href='inquiryDetailView.html'"></td>
+                <td th:text="${inquiry.category}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br />
+    <br />
+    <button type="button" onclick="location.href='/cs/inquiry'">문의하기</button>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>문의하기</title>
+</head>
+<body>
+<form method="post" th:action="${'/cs/inquiry'}">
+    제목: <input type="text" name="title" /><br />
+    분류: <input type="text" name="category" /><br />
+    본문 : <textarea name="text" rows="10" cols="80"></textarea><br />
+
+    작성일시 : <br />
+    작성자 : <br />
+    <input type="submit" />
+</form>
+    <a href="/cs/login">취소</a>
+</body>
+</html>
